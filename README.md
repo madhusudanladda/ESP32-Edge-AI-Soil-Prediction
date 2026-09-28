@@ -30,23 +30,41 @@ The architecture is designed around:
 
 The complete system works as a combination of sensor-based measurement and Edge AI prediction.
               7-in-1 Soil Sensor
+              
                       │
+                      
                       ▼
+                      
                RS485 / Modbus
+               
                       │
+                      
                       ▼
+                      
                     ESP32
+                    
                       │
+                      
           ┌───────────┴───────────┐
+          
           │                       │
+          
           ▼                       ▼
+          
    Direct Sensor Values       ML Processing
+   
           │                       │
+          
           │                       ▼
+          
           │                 AI Prediction
+          
           │                       │
+          
           └───────────┬───────────┘
+          
                       ▼
+                      
               17 Soil Parameters
 
 The ESP32 acts as the main embedded processing unit responsible for sensor data acquisition, data processing, and execution of the machine learning inference pipeline.
@@ -59,13 +77,19 @@ Directly Measured Parameters — 7
 
 The 7-in-1 soil sensor provides:
 
-#	Parameter	Source
+###	Parameter	Source
 1	Soil Moisture	                Sensor
+
 2	Soil Temperature	            Sensor
+
 3	pH	                          Sensor
+
 4	Electrical Conductivity (EC)	Sensor
+
 5	Nitrogen (N)	                Sensor
+
 6	Phosphorus (P)	              Sensor
+
 7	Potassium (K)	                Sensor
 
 These values are directly acquired from the soil sensor through the RS485/Modbus communication interface.
@@ -74,16 +98,25 @@ AI-Predicted Parameters — 10
 
 The machine learning model predicts additional soil properties:
 
-#	Parameter	Source
+###	Parameter	Source
 8	Organic Carbon (OC)	  AI Prediction
+
 9	Calcium (Ca)	        AI Prediction
+
 10	Magnesium (Mg)	    AI Prediction
+
 11	Sulphur (S)      	  AI Prediction
+
 12	Boron (B)	          AI Prediction
+
 13	Zinc (Zn)	          AI Prediction
+
 14	Iron (Fe)	          AI Prediction
+
 15	Copper (Cu)	        AI Prediction
+
 16	Manganese (Mn)	    AI Prediction
+
 17	Total Carbon (C)	  AI Prediction
 
 Therefore:
@@ -102,6 +135,7 @@ Although the sensor provides 7 values, the current public training dataset conta
 
 The remaining two sensor values — moisture and temperature — are still available as part of the complete sensor output and can be displayed, logged, and used by the overall system.
 
+
 Current ML Input
 
 pH  
@@ -109,6 +143,7 @@ EC
 N  
 P  
 K  
+
 
 ML Output
 OC  
