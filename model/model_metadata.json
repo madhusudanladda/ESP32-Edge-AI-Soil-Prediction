@@ -1,0 +1,25 @@
+{
+  "model": "Ridge multi-output regression",
+  "features": [
+    "pH",
+    "EC",
+    "N",
+    "P",
+    "K"
+  ],
+  "targets": [
+    "OC",
+    "Ca",
+    "Mg",
+    "S",
+    "B",
+    "Zn",
+    "Fe",
+    "Cu",
+    "Mn",
+    "C"
+  ],
+  "samples": 42,
+  "dataset_source": "Zenodo 10.5281/zenodo.15519844",
+  "note": "Public dataset contains pH, EC, N, P, K and 10 target lab properties, but does not contain the 7-in-1 sensor's moisture and temperature channels. They are therefore not used for training."
+}
